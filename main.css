@@ -18,14 +18,40 @@ header .container {
 }
 
 header {
-    padding: 16px 0;
+    padding: 16px 0 0;
     border-bottom: 1px solid #ccc;
 }
 
 .submenu {
     display: none;
+    position: absolute;
+    border: 1px solid red;
+    left: 0;
+    width: 300px;
+    top: 100%;
 }
 
-.menu li {
+.menu > li {
     float: left;
+    list-style: none;
+    padding: 16px;
+    border-top: 4px solid transparent;
+    position: relative;
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.clear {
+    clear: both;
+}
+
+.submenu li {
+    display: block;
+    padding: 8px;
+}
+
+.menu li:hover {
+    border-color: red;
 }
